@@ -1,0 +1,18 @@
+{% extends "babYoda/layout.html" %}
+
+{% block content%}
+
+<div class="evento"></div>
+    <h1 class="evento__titulo">Onde você irá me encontrar? </h1>
+
+    <div class="evento__local"> <span class="negrito">Dia:</span> 10/04/2021</div>
+    <div class="evento__local"> <span class="negrito">Horário:</span> 15h às 17h </div>
+    <div class="evento__local"> <span class="negrito">Endereço:</span> QNM 36 Conjunto A2 Casa 07 </div>
+    <div class="evento__local"> M-Norte - Atrás do JK Shopping </div>
+
+    <div id="mapa" class="evento__mapa"></div>
+    
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBIQk4jxHzUYCiboR2VEqpXk2G1PFNTMPo&callback=inicializar">
+    </script>
+
+{% endblock %}

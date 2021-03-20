@@ -6,6 +6,7 @@
     <title>Chá BabbYoda</title>
     <meta charset="utf-8">
     <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <script src="{% static 'js/script.js' %}"></script>
   </head>
 
   <body>
@@ -15,9 +16,11 @@
     </header>
 
     <nav>
-      {% for item in itens %}
-          <a href="" class='navbar'>{{ item }}</a>
-      {% endfor %}
+      <a href="{% url 'babYoda:home' %}" class='navbar'>home</a>
+      <a href="{% url 'babYoda:lista' %}" class='navbar'>lista</a>
+      <a href="{% url 'babYoda:evento' %}" class='navbar'>evento</a>
+      <a href="{% url 'babYoda:album' %}" class='navbar'>album</a>
+      <a href="{% url 'babYoda:comentarios' %}" class='navbar'>comentarios</a>
     </nav>
     
     <main id='content'>
