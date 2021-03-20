@@ -1,0 +1,32 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <title>Chá BabbYoda</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+  </head>
+
+  <body>
+
+    <header id='header'>
+
+    </header>
+
+    <nav>
+      {% for item in itens %}
+          <a href="" class='navbar'>{{ item }}</a>
+      {% endfor %}
+    </nav>
+    
+    <main id='content'>
+      {% block content%}
+      {% endblock %}
+    </main>
+
+    <footer id='footer'>
+  
+    </footer>
+  </body>
+</html>
