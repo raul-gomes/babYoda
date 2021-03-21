@@ -2,3 +2,4 @@
 .vscode
 .cha
 __pycache__
+migrations

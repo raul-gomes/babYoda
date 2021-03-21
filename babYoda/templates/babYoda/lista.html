@@ -8,62 +8,25 @@
 
     <div class="conteiner">
 
+        {% for item in itens %}
         <div class="box">
             <div class="box__imagem">
-                <img src="" alt="fralda" class="box__imagem--foto">
+                <img src="{{ item.imagem.url }}" alt="{{ item.item }}" class="box__imagem--foto">
             </div>
             <div class="box__informacao">
                 <div class="box__informacao--icone">
                     <img src="{% static 'media/remover.svg' %}" alt="remover" class="box__imagem--remover">
                 </div>
                 <div class="box__titulo">
-                    <span class="box__imagem--texto">Fralda P</span>
-                    <span class="box__imagem--texto">R$ 21,00</span>
+                    <span class="box__imagem--texto">{{ item.item }}</span>
+                    <span class="box__imagem--texto">R$ {{ item.preco }}</span>
                 </div>
                 <div class="box__informacao--icone">
                     <img src="{% static 'media/adicionar.svg' %}" alt="adicionar" class="box__imagem--adicionar">
                 </div>
             </div>
         </div>
-
-        <div class="box">
-            <div class="box__imagem">
-                <img src="" alt="fralda" class="box__imagem--foto">
-            </div>
-            <div class="box__informacao">
-                <div class="box__informacao--icone">
-                    <img src="{% static 'media/remover.svg' %}" alt="remover" class="box__imagem--remover">
-                </div>
-                <div class="box__titulo">
-                    <span class="box__imagem--texto">Fralda P</span>
-                    <span class="box__imagem--texto">R$ 21,00</span>
-                </div>
-                <div class="box__informacao--icone">
-                    <img src="{% static 'media/adicionar.svg' %}" alt="adicionar" class="box__imagem--adicionar">
-                </div>
-            </div>
-        </div>
-
-        <div class="box">
-            <div class="box__imagem">
-                <img src="" alt="fralda" class="box__imagem--foto">
-            </div>
-            <div class="box__informacao">
-                <div class="box__informacao--icone">
-                    <img src="{% static 'media/remover.svg' %}" alt="remover" class="box__imagem--remover">
-                </div>
-                <div class="box__titulo">
-                    <span class="box__imagem--texto">Fralda P</span>
-                    <span class="box__imagem--texto">R$ 21,00</span>
-                </div>
-                <div class="box__informacao--icone">
-                    <img src="{% static 'media/adicionar.svg' %}" alt="adicionar" class="box__imagem--adicionar">
-                </div>
-            </div>
-        </div>
-
-        
-
+        {% endfor %}
     </div>
     
 
