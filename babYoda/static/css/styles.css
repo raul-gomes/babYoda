@@ -83,6 +83,8 @@ main {
 .conteiner{
     display: flex;
     flex-wrap: wrap;
+    margin-left: 300px;
+    margin-right: 300px;
 }
 
 .box {
@@ -129,6 +131,22 @@ main {
     font-size: 16px;    
     display: flex;
     flex-direction: column;
+}
+
+#carrinho {
+    margin-left: auto;
+    margin-right: 150px;
+    width: 120px;
+    height: 120px;
+    padding: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 50%;
+
+}
+
+.carrinho__icone {
+    height: 100px;
+    width: 100px;
 }
 
 

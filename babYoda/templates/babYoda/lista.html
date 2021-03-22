@@ -19,15 +19,21 @@
                 </div>
                 <div class="box__titulo">
                     <span class="box__imagem--texto">{{ item.item }}</span>
-                    <span class="box__imagem--texto">R$ {{ item.preco }}</span>
+                    <span class="box__imagem--preco">R$ {{ item.preco }}</span>
                 </div>
                 <div class="box__informacao--icone">
-                    <img src="{% static 'media/adicionar.svg' %}" alt="adicionar" class="box__imagem--adicionar">
+                    <img src="{% static 'media/adicionar.svg' %}" alt="adicionar" class="box__imagem--adicionar" >
                 </div>
             </div>
         </div>
         {% endfor %}
     </div>
+    
+    <div id="carrinho" hidden>
+        <img src="{% static 'media/carrinho.svg' %}" alt="carrinho" class="carrinho__icone">
+    </div>
+
+    <script src="{% static 'js/carrinho.js' %}"></script>
     
 
 {% endblock %}

@@ -2,6 +2,8 @@
 
 {% block content%}
 
+{% load static %}
+
 <div class="evento"></div>
     <h1 class="evento__titulo">Onde você irá me encontrar? </h1>
 
@@ -15,6 +17,7 @@
         </div>
     </a>
     
+    <script src="{% static 'js/mapa.js' %}"></script>
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBIQk4jxHzUYCiboR2VEqpXk2G1PFNTMPo&callback=inicializar">
     </script>
 
