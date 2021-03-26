@@ -1,0 +1,10 @@
+{% extends "babYoda/layout.html" %}
+
+{% load static %}
+
+{% block content%}
+    {% for item, valor in lista %}
+        <div id="lista_final">{{ item }}: R$ {{ valor }}</div>
+    {% endfor %}
+
+{% endblock %}

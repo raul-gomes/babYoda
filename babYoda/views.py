@@ -1,5 +1,8 @@
 from django.shortcuts import render
 from lista.util import getItem
+from .forms import ListaForm
+from lista.util import arrumalista, pega_lista
+
 
 # Create your views here.
 
@@ -7,9 +10,21 @@ def home(request):
     return render(request, "babYoda/home.html")
 
 def lista(request):
+
+    if request.method == 'POST':        
+        form = ListaForm(request.POST)
+
+        if form.is_valid():
+            lista = form.cleaned_data
+            arrumalista(lista['lista'])
+    else:
+        form = ListaForm()
+            
     itens = getItem()
+
     return render(request, "babYoda/lista.html", {
         'itens': itens,
+        'form': form,
     })
 
 def evento(request):
@@ -20,3 +35,9 @@ def album(request):
 
 def comentarios(request):
     return render(request, "babYoda/comentarios.html")
+
+def carrinho(request):
+    lista = pega_lista()
+    return render(request, "babYoda/carrinho.html", {
+        "lista": lista
+    })

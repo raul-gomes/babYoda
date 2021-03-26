@@ -28,14 +28,20 @@
         </div>
         {% endfor %}
     </div>
-    
+
+    <div id="lista_final"></div>
+        <form method='post'>
+            {% csrf_token %}
+            <input type="text" name="lista" value="">
+            <input type="submit" >
+            
+        </form>
+    </div>    
     <div id="carrinho" hidden>
-        <img src="{% static 'media/carrinho.svg' %}" alt="carrinho" class="carrinho__icone">
+        <a href="{% url 'babYoda:carrinho' %}"><img src="{% static 'media/carrinho.svg' %}" alt="carrinho" class="carrinho__icone"></a>
     </div>
 
     <script src="{% static 'js/carrinho.js' %}"></script>
     
 
 {% endblock %}
-
-

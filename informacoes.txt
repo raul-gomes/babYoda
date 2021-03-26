@@ -14,3 +14,28 @@ fralda G - 90 unidades
 
 kit higiene
 lenço umedecido
+
+
+"""    'DEFAULT_AUTHENTICATION_CLASSES': [
+        'rest_framework.authentication.SessionAuthentication'
+    ],"""
+
+    fetch(ROOT,
+        {method : "POST",
+        credentials: 'same-origin',
+        headers: {
+            "X-CSRFToken": csrftoken,
+            "Accept": "application/json",
+            "Content-Type": "application/json"
+        },
+        body: JSON.parse(itens),  
+    })
+    .then(function(response) {
+        return response.json();
+    }).then(function(data) {
+        console.log("Data is ok", data);
+    }).catch(function(ex) {
+        console.log("parsing failed", ex);
+    });
+
+  
