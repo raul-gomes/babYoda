@@ -1,10 +1,8 @@
+ROOT = "http://127.0.0.1:8000/"
+
 var adicionar = document.getElementsByClassName("box__imagem--adicionar")
 var remover = document.getElementsByClassName("box__imagem--remover")
-var carrinho = document.getElementsByClassName("carrinho__icone")
 var lista_final = document.getElementsByClassName("lista__final-array")
-
-const csrftoken = getCookie('csrftoken');
-
 
 var cont = 0;
 var itens = [];
@@ -21,7 +19,7 @@ for (var i = 0; i < adicionar.length; i++) {
 function addItens(evento) {
 
     cont++;
-    document.getElementById("carrinho").style.display = 'block';
+    
     evento.preventDefault();
     const nome = evento.path[2].getElementsByClassName('box__imagem--texto')[0].innerText;
     const preco = parseFloat(evento.path[2].getElementsByClassName('box__imagem--preco')[0].innerText.slice(2, 8).replace(",", "."));
@@ -35,7 +33,6 @@ function remItens(evento) {
     cont--;
     if (cont <= 0) {
         cont=0
-        document.getElementById("carrinho").style.display = 'none';
     }
 
     evento.preventDefault();

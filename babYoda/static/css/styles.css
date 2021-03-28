@@ -6,31 +6,73 @@
 
 body {
     display: grid;
+
+    max-height: 100%;
+    max-width: 100%;
+
     grid-template-columns: 1fr;
     grid-template-rows: 17vh 3vh 70vh 10vh;
     grid-template-areas: "header"
                         "nav"
                         "main"
-                        "footer"
+                        "footer";
+    
+    background-image: url('/static/media/fundo_galaxy 200x200.png');
+    background-repeat: repeat;
+    
 }
 
 header {
-    background: cyan;
+    background: #20344C;
     grid-area: header;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.3);
+}
+
+.conteiner_header {
+    display: flex;
+    max-width: 1300px;
+    max-height: 150px;
+    align-content: space-between;
+}
+
+.conteiner__imagem {
+    height: 190px;
+    width: 190px;
+}
+
+.titulo_cha {
+    margin-left: 200px;
+    margin-top: 30px;
+    font-size: 30px;
+    font-family: 'Gentium Book Basic', serif;
 }
 
 nav {
     grid-area: nav;
-    align-self: center;
+
     margin-left: auto;
     margin-right: auto;
+
+}
+
+.conteiner__nav{
+    display: flex;
+    align-content: space-between;
+    border: 50px;
+    width: 400px;
+    height: 50px;
+    border: 1px solid black;
+    text-align: center;
 }
 
 .navbar {
-    padding: 5px;
+    
+    margin: 5px;
     text-decoration: none;
-    background-color: rgb(99, 238, 99);
-    color: white;
+    background-color: rgb(47, 129, 27);
+    color: black;
 }
 
 main {
@@ -40,29 +82,52 @@ main {
     align-self: center;
     text-align: center;
     overflow: auto;
+
+
 }
 
 .texto {
-    width: 50%;
-    height: 50%;
-    margin-left: auto;
-    margin-right: auto;
+    width: auto;
+    height: auto;
+    margin: 30px 360px;
+    background-color: #8698b6;
+    padding: 30px;
+    border-radius: 20px;
 
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .texto__titulo {
-    font-size: 30px;
-    color: green;
+    font-size: 40px;
+    color: #103D02;
     padding-bottom: 30px;
+}
+
+.titulo_cor{
+    color: #103D02;
+    font-weight: bolder;
 }
 
 .texto__conteudo {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 16px;
+
+    
+    
 }
 
 .texto__conteudo--paragrafo {
     padding: 10px;
+}
+
+.evento {
+    width: auto;
+    height: auto;
+    margin: 30px 500px;
+    background-color: #7a90b3;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .evento__titulo {
@@ -76,8 +141,8 @@ main {
 #mapa {
     height:250px;
     width:400px;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 30px auto;
+    
 }
 
 .conteiner{
@@ -96,6 +161,7 @@ main {
     margin-right: auto;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     border-radius: 10px;
+    background-color: #8998b1;
 }
 
 .box__imagem {
@@ -151,6 +217,20 @@ main {
 
 
 footer {
-    background: gray;
+    background: #20344C;
     grid-area: footer;
+    max-height: 100%;
+    max-width: 100%;
+    height: auto;
+    width: auto;
+}
+
+.conteiner__footer{
+    display: flex;
+    height: 100%;
+    width: 100%;
+}
+
+.conteiner__imagem {
+    margin: 0 auto;
 }

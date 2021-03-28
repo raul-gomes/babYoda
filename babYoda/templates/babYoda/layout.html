@@ -6,20 +6,33 @@
     <title>Chá BabbYoda</title>
     <meta charset="utf-8">
     <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Gentium+Book+Basic&display=swap" rel="stylesheet">
+
   </head>
 
   <body>
 
-    <header id='header'>
-
+    <header id='header'> 
+      <div class="conteiner_header">
+        <div class="conteiner__titulo">
+          <div class="titulo_cha">BabYoda Chá-Fraldas</div>
+        </div>
+        <div class="conteiner__imagem">
+          <img src="{% static 'media/babyoda.png' %}" alt="cabeçalho">
+        </div>
+      </div>
     </header>
 
     <nav>
-      <a href="{% url 'babYoda:home' %}" class='navbar'>home</a>
-      <a href="{% url 'babYoda:lista' %}" class='navbar'>lista</a>
-      <a href="{% url 'babYoda:evento' %}" class='navbar'>evento</a>
-      <a href="{% url 'babYoda:album' %}" class='navbar'>album</a>
-      <a href="{% url 'babYoda:comentarios' %}" class='navbar'>comentarios</a>
+      <div class="conteiner__nav">
+        <a href="{% url 'babYoda:home' %}" class='navbar'>home</a>
+        <a href="{% url 'babYoda:lista' %}" class='navbar'>lista</a>
+        <a href="{% url 'babYoda:evento' %}" class='navbar'>evento</a>
+        <a href="{% url 'babYoda:album' %}" class='navbar'>album</a>
+        <a href="{% url 'babYoda:comentarios' %}" class='navbar'>comentarios</a>
+      </div>
     </nav>
     
     <main id='content'>
@@ -28,7 +41,13 @@
     </main>
 
     <footer id='footer'>
-      <div>Icons made by <a href="https://www.flaticon.com/authors/vectors-market" title="Vectors Market">Vectors Market</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
+      <div class="conteiner__footer">
+        <div class="conteiner__imagem">
+          <img src="{% static 'media/bayoda_rodape.png' %}" alt="cabeçalho">
+        </div>
+      </div>
     </footer>
+
+
   </body>
 </html>

@@ -11,16 +11,8 @@ def home(request):
 
 def lista(request):
 
-    if request.method == 'POST':        
-        form = ListaForm(request.POST)
-
-        if form.is_valid():
-            lista = form.cleaned_data
-            arrumalista(lista['lista'])
-    else:
-        form = ListaForm()
-            
     itens = getItem()
+    form = ListaForm()
 
     return render(request, "babYoda/lista.html", {
         'itens': itens,
@@ -37,7 +29,16 @@ def comentarios(request):
     return render(request, "babYoda/comentarios.html")
 
 def carrinho(request):
+    
+    if request.method == 'POST':        
+        form = ListaForm(request.POST)
+
+        if form.is_valid():
+            lista = form.cleaned_data
+            arrumalista(lista['lista'])
+
     lista = pega_lista()
+    
     return render(request, "babYoda/carrinho.html", {
         "lista": lista
     })

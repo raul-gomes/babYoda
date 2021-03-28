@@ -4,7 +4,7 @@
 
 {% load static %}
 
-<div class="evento"></div>
+<div class="evento">
     <h1 class="evento__titulo">Onde você irá me encontrar? </h1>
 
     <div class="evento__local"> <span class="negrito">Dia:</span> 10/04/2021</div>
@@ -16,9 +16,9 @@
         <div id="mapa" class="evento__mapa">
         </div>
     </a>
+</div>
     
-    <script src="{% static 'js/mapa.js' %}"></script>
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBIQk4jxHzUYCiboR2VEqpXk2G1PFNTMPo&callback=inicializar">
-    </script>
+<script src="{% static 'js/mapa.js' %}"></script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBIQk4jxHzUYCiboR2VEqpXk2G1PFNTMPo&callback=inicializar"></script>
 
 {% endblock %}
